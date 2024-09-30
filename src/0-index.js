@@ -22,7 +22,7 @@
 
 // console.log(`Este es un saludo: \n${getSaludo(nombre)}`);
 
-//* OBJETOS LITERALES
+//* OBJETOS 
 // const persona = {
 //     nombre: 'Miguel',
 //     apellido: 'Cruz',
