@@ -269,3 +269,45 @@ console.log(suma); // 15 (1 + 2 + 3 + 4 + 5 = 15)
 // const nombre = usuario.nombre ?? 'Usuario sin nombre';
 // console.log(nombre)
 
+// Seleccionar elementos por ID
+const tecnologiasDiv = document.getElementById('tecnologias');
+console.log(tecnologiasDiv);  // Muestra el div con id="tecnologias"
+
+// Seleccionar elementos por clase
+const reactElement = document.getElementsByClassName('react');
+console.log(reactElement[0]);  // Muestra el primer elemento con clase "react"
+
+// Seleccionar todos los elementos <a> (etiqueta)
+const enlaces = document.getElementsByTagName('a');
+console.log(enlaces);  // Muestra todos los enlaces <a>
+
+// querySelector para seleccionar el primer elemento que coincida con un selector
+const heading = document.querySelector('.heading');
+console.log(heading);  // Muestra el primer elemento con la clase "heading"
+
+// querySelectorAll para seleccionar todos los elementos que coincidan con un selector
+const allEnlaces = document.querySelectorAll('.navegacion a');
+console.log(allEnlaces);  // Muestra todos los enlaces dentro de la clase "navegacion"
+
+// EVENTOS
+
+// Evento de clic en los enlaces
+allEnlaces.forEach(enlace => {
+    enlace.addEventListener('click', (e) => {
+        e.preventDefault();  // Evitar comportamiento por defecto del enlace
+        alert(`Haz hecho clic en ${e.target.textContent}`);
+    });
+});
+
+// Evento de input en el formulario
+const nombreInput = document.getElementById('nombre');
+nombreInput.addEventListener('input', (e) => {
+    console.log(`Escribiste: ${e.target.value}`);
+});
+
+// Evento de submit en el formulario
+const formulario = document.getElementById('formulario');
+formulario.addEventListener('submit', (e) => {
+    e.preventDefault();  // Evitar que el formulario se envíe
+    alert('Formulario enviado');
+});
